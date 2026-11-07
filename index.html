@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IBM Z Community UA — Comunidad universitaria para estudiantes apasionados por la tecnología IBM Z. Aprende, conecta y crece profesionalmente." />
+  <meta name="keywords" content="IBM Z, comunidad universitaria, IBM Z Xplore, estudiantes, tecnología, mainframe" />
+  <meta name="author" content="Rodrigo Quispe Gil" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IBM Z Community UA" />
+  <meta property="og:description" content="Únete a una comunidad universitaria donde podrás aprender sobre IBM Z, conectar con otros estudiantes y descubrir nuevas oportunidades de crecimiento profesional." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ibmzcommunity-ua.vercel.app" />
+  <meta property="og:image" content="/og-image.png" />
+
+  <title>IBM Z Community UA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="#inicio" class="navbar__logo" aria-label="IBM Z Community UA — Inicio">
+        <svg class="logo-icon" viewBox="0 0 56 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="54" height="118" rx="2" stroke="currentColor" stroke-width="2"/>
+          <line x1="1" y1="30" x2="55" y2="30" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="1" y1="60" x2="55" y2="60" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="1" y1="90" x2="55" y2="90" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="1" x2="28" y2="119" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="1" y1="1" x2="28" y2="30" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="1" x2="55" y2="30" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="30" x2="1" y2="60" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="30" x2="55" y2="60" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="1" y1="60" x2="28" y2="90" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="55" y1="60" x2="28" y2="90" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="90" x2="1" y2="119" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="28" y1="90" x2="55" y2="119" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="logo-text">IBM Z<span class="logo-sub"> Community UA</span></span>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <ul class="navbar__links" role="list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#comunidad" class="nav-link">Comunidad</a></li>
+          <li><a href="#xplore" class="nav-link">IBM Z Xplore</a></li>
+          <li><a href="#actividades" class="nav-link">Actividades</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <a href="#cta" class="btn btn--nav">Únete a la comunidad</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú móvil" hidden>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#inicio" class="mobile-link">Inicio</a></li>
+        <li><a href="#comunidad" class="mobile-link">Comunidad</a></li>
+        <li><a href="#xplore" class="mobile-link">IBM Z Xplore</a></li>
+        <li><a href="#actividades" class="mobile-link">Actividades</a></li>
+        <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      </ul>
+      <a href="#cta" class="btn btn--primary mobile-cta">Únete a la comunidad</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__particles" aria-hidden="true" id="particles"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="badge-dot"></span>
+            IBM Z Student Ambassador Program
+          </div>
+          <h1 class="hero__title" id="hero-title">
+            Impulsa tu futuro<br/><span class="text-gradient">con IBM Z</span>
+          </h1>
+          <p class="hero__desc">
+            Únete a una comunidad universitaria donde podrás aprender sobre IBM Z, conectar con otros estudiantes y descubrir nuevas oportunidades de crecimiento profesional.
+          </p>
+          <div class="hero__actions">
+            <a href="https://chat.whatsapp.com/BWvJWWB3qevKkttHyBTSd6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Unirme por WhatsApp
+            </a>
+            <a href="#xplore" class="btn btn--ghost btn--large">
+              Conocer IBM Z Xplore
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Gratuito</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Recursos</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="stat-number">UA</span>
+              <span class="stat-label">Comunidad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero visual: CSS/HTML tech illustration -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-viz">
+            <!-- Mainframe column -->
+            <div class="viz-mainframe">
+              <div class="viz-mf-header">
+                <span class="viz-dot viz-dot--pink"></span>
+                <span class="viz-dot viz-dot--sky"></span>
+                <span class="viz-dot viz-dot--teal"></span>
+              </div>
+              <div class="viz-mf-body">
+                <div class="viz-bar" style="--w:85%;--d:0s"></div>
+                <div class="viz-bar" style="--w:60%;--d:.1s"></div>
+                <div class="viz-bar" style="--w:75%;--d:.2s"></div>
+                <div class="viz-bar" style="--w:90%;--d:.3s"></div>
+                <div class="viz-bar" style="--w:45%;--d:.4s"></div>
+                <div class="viz-bar" style="--w:70%;--d:.5s"></div>
+              </div>
+              <div class="viz-mf-grid">
+                <div class="viz-grid-cell"></div><div class="viz-grid-cell"></div><div class="viz-grid-cell"></div>
+                <div class="viz-grid-cell"></div><div class="viz-grid-cell"></div><div class="viz-grid-cell"></div>
+                <div class="viz-grid-cell"></div><div class="viz-grid-cell"></div><div class="viz-grid-cell"></div>
+              </div>
+            </div>
+            <!-- Floating cards -->
+            <div class="viz-card viz-card--1">
+              <span class="viz-card-icon">⬡</span>
+              <span>IBM Z Xplore</span>
+            </div>
+            <div class="viz-card viz-card--2">
+              <span class="viz-card-icon">◈</span>
+              <span>Badge earned</span>
+            </div>
+            <div class="viz-card viz-card--3">
+              <span class="viz-card-icon">⬟</span>
+              <span>+1 Skill</span>
+            </div>
+            <!-- Orbit rings -->
+            <div class="viz-orbit viz-orbit--1">
+              <div class="viz-orbit-dot"></div>
+            </div>
+            <div class="viz-orbit viz-orbit--2">
+              <div class="viz-orbit-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-label="Desplázate hacia abajo">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SOBRE LA COMUNIDAD ═══════════════════════════ -->
+    <section class="section comunidad" id="comunidad" aria-labelledby="comunidad-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Sobre nosotros</p>
+          <h2 class="section-title" id="comunidad-title">¿Qué es IBM Z Community UA?</h2>
+          <p class="section-subtitle">Una comunidad universitaria construida por estudiantes, para estudiantes. Exploramos la tecnología IBM Z juntos.</p>
+        </div>
+
+        <div class="comunidad__grid">
+          <article class="comunidad-card" data-reveal>
+            <div class="comunidad-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="comunidad-card__title">Aprendizaje</h3>
+            <p class="comunidad-card__desc">Accedé a recursos, laboratorios y contenidos diseñados para introducirte al ecosistema IBM Z de manera práctica y progresiva.</p>
+          </article>
+
+          <article class="comunidad-card" data-reveal>
+            <div class="comunidad-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="17" cy="21" r="1"/><circle cx="7" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/><path d="M16 16l4-4-4-4M8 8l-4 4 4 4"/></svg>
+            </div>
+            <h3 class="comunidad-card__title">Networking</h3>
+            <p class="comunidad-card__desc">Conectá con otros estudiantes universitarios interesados en tecnología. Construí relaciones que trascienden el aula.</p>
+          </article>
+
+          <article class="comunidad-card" data-reveal>
+            <div class="comunidad-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="comunidad-card__title">Comunidad</h3>
+            <p class="comunidad-card__desc">Somos un espacio inclusivo donde la curiosidad es bienvenida. Sin importar tu carrera, podés ser parte de la comunidad.</p>
+          </article>
+
+          <article class="comunidad-card" data-reveal>
+            <div class="comunidad-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="comunidad-card__title">Oportunidades</h3>
+            <p class="comunidad-card__desc">Descubrí oportunidades reales: certificaciones, insignias digitales, experiencia práctica y acceso al ecosistema IBM.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ BENEFICIOS ═══════════════════════════ -->
+    <section class="section beneficios" aria-labelledby="beneficios-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Por qué unirte</p>
+          <h2 class="section-title" id="beneficios-title">Todo lo que encontrarás aquí</h2>
+          <p class="section-subtitle">Una experiencia diseñada para que crezcas como profesional desde la universidad.</p>
+        </div>
+
+        <div class="beneficios__grid">
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Introducción a IBM Z</h3>
+            <p>Conocé la plataforma tecnológica más confiable del mundo empresarial, desde cero.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>IBM Z Xplore</h3>
+            <p>Accedé gratuitamente a la plataforma oficial de IBM con laboratorios prácticos e insignias digitales.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3>Aprendizaje continuo</h3>
+            <p>Recursos, sesiones y contenidos actualizados para que siempre estés un paso adelante.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Networking universitario</h3>
+            <p>Conectá con estudiantes de distintas carreras y universidades que comparten tu interés por la tecnología.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/><line x1="9" y1="7" x2="9" y2="7.01"/><line x1="15" y1="7" x2="15" y2="7.01"/></svg>
+            </div>
+            <h3>Actividades y talleres</h3>
+            <p>Meetups, sesiones en vivo, workshops y retos de aprendizaje diseñados para todos los niveles.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </div>
+            <h3>Desarrollo profesional</h3>
+            <p>Fortalecé tu perfil con experiencias reales, certificaciones y conexiones que potencian tu carrera.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ IBM Z XPLORE ═══════════════════════════ -->
+    <section class="section xplore" id="xplore" aria-labelledby="xplore-title">
+      <div class="container xplore__inner">
+        <div class="xplore__content">
+          <p class="section-eyebrow">Plataforma oficial IBM</p>
+          <h2 class="section-title" id="xplore-title">Comienza tu recorrido con IBM Z Xplore</h2>
+          <p class="xplore__desc">IBM Z Xplore es la plataforma de aprendizaje oficial de IBM para IBM Z. Diseñada para principiantes, ofrece una experiencia de aprendizaje completa y totalmente gratuita.</p>
+          <ul class="xplore__features" role="list">
+            <li><span class="feature-check" aria-hidden="true">✓</span> Plataforma 100% gratuita</li>
+            <li><span class="feature-check" aria-hidden="true">✓</span> Laboratorios prácticos interactivos</li>
+            <li><span class="feature-check" aria-hidden="true">✓</span> Aprendizaje autodirigido a tu ritmo</li>
+            <li><span class="feature-check" aria-hidden="true">✓</span> Insignias digitales verificables</li>
+            <li><span class="feature-check" aria-hidden="true">✓</span> Pensado para principiantes</li>
+          </ul>
+          <a href="https://ibmzxplore.influitive.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            Explorar IBM Z Xplore
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- CSS Dashboard -->
+        <div class="xplore__dashboard" aria-hidden="true">
+          <div class="dash">
+
+            <!-- Header: usuario -->
+            <div class="dash__header">
+              <div class="dash__title-row">
+                <div class="dash__avatar">RQ</div>
+                <div>
+                  <div class="dash__name">Rodrigo Q.</div>
+                  <div class="dash__role">IBM Z Student Ambassador</div>
+                </div>
+                <div class="dash__level dash__level--star">⭑ All Star</div>
+              </div>
+              <div class="dash__progress-wrap">
+                <div class="dash__progress-label">Progreso total del learning path</div>
+                <div class="dash__progress-bar"><div class="dash__progress-fill" style="--pct:88%"></div></div>
+                <div class="dash__progress-pct">88%</div>
+              </div>
+            </div>
+
+            <!-- Learning path visual -->
+            <div class="dash__path-title">Tu recorrido en IBM Z Xplore</div>
+            <div class="dash__path">
+
+              <div class="dash__path-step done">
+                <div class="dash__path-node">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="dash__path-info">
+                  <span class="dash__path-label">Meet the Mainframe</span>
+                  <span class="dash__path-tag done-tag">Completado</span>
+                </div>
+              </div>
+              <div class="dash__path-connector done-line"></div>
+
+              <div class="dash__path-step done">
+                <div class="dash__path-node">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="dash__path-info">
+                  <span class="dash__path-label">IBM Z Xplore Essentials</span>
+                  <span class="dash__path-badge">Badge 01</span>
+                </div>
+              </div>
+              <div class="dash__path-connector done-line"></div>
+
+              <div class="dash__path-step done">
+                <div class="dash__path-node">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="dash__path-info">
+                  <span class="dash__path-label">Fundamentals + Concepts</span>
+                  <span class="dash__path-badge">Badge 02</span>
+                </div>
+              </div>
+              <div class="dash__path-connector done-line"></div>
+
+              <div class="dash__path-step done">
+                <div class="dash__path-node">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="dash__path-info">
+                  <span class="dash__path-label">Advanced</span>
+                  <span class="dash__path-badge">Badge 03</span>
+                </div>
+              </div>
+              <div class="dash__path-connector active-line"></div>
+
+              <div class="dash__path-step active">
+                <div class="dash__path-node">
+                  <span class="dash__path-pulse"></span>
+                </div>
+                <div class="dash__path-info">
+                  <span class="dash__path-label">All Star</span>
+                  <span class="dash__path-tag active-tag">En progreso →</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ ACTIVIDADES ═══════════════════════════ -->
+    <section class="section actividades" id="actividades" aria-labelledby="actividades-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Lo que hacemos</p>
+          <h2 class="section-title" id="actividades-title">Actividades de la comunidad</h2>
+          <p class="section-subtitle">Espacios diseñados para aprender, compartir y crecer junto a otros estudiantes.</p>
+        </div>
+
+        <div class="actividades__grid">
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="actividad-tag">Presencial / Virtual</span>
+            </div>
+            <h3>Meetups</h3>
+            <p>Encuentros regulares para compartir novedades, avances y conectar con la comunidad en un espacio relajado.</p>
+          </article>
+
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <span class="actividad-tag">Para todos</span>
+            </div>
+            <h3>Sesiones introductorias</h3>
+            <p>Charlas accesibles pensadas para quienes recién comienzan su exploración del mundo IBM Z.</p>
+          </article>
+
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="actividad-tag">Hands-on</span>
+            </div>
+            <h3>Talleres técnicos</h3>
+            <p>Workshops prácticos donde ponés manos a la obra con herramientas, lenguajes y entornos IBM Z reales.</p>
+          </article>
+
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span class="actividad-tag">Inspiración</span>
+            </div>
+            <h3>Charlas</h3>
+            <p>Presentaciones sobre temas de tecnología, carrera profesional, ecosistema IBM y tendencias del sector.</p>
+          </article>
+
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <span class="actividad-tag">Comunidad</span>
+            </div>
+            <h3>Networking</h3>
+            <p>Espacios pensados para que forjes vínculos reales con otros estudiantes y referentes tecnológicos.</p>
+          </article>
+
+          <article class="actividad-card" data-reveal>
+            <div class="actividad-card__top">
+              <div class="actividad-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 3a3 3 0 0 0-3 3l-4 12a3 3 0 0 0 3 3 3 3 0 0 0 3-3l4-12a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/><path d="M6 21a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3z"/></svg>
+              </div>
+              <span class="actividad-tag">Desafíos</span>
+            </div>
+            <h3>Retos de aprendizaje</h3>
+            <p>Desafíos semanales en IBM Z Xplore para acelerar tu aprendizaje y ganar insignias digitales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ FUNDADOR ═══════════════════════════ -->
+    <section class="section fundador" aria-labelledby="fundador-title">
+      <div class="container fundador__inner">
+        <div class="fundador__photo-wrap">
+          <div class="fundador__photo-placeholder" aria-label="Foto de Rodrigo Quispe Gil">
+            <div class="photo-initials">RQ</div>
+          </div>
+          <div class="fundador__badge-wrap">
+            <div class="fundador__ibm-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              IBM Z Student Ambassador
+            </div>
+          </div>
+        </div>
+
+        <div class="fundador__content">
+          <p class="section-eyebrow">Conoce al fundador</p>
+          <h2 class="fundador__name" id="fundador-title">Rodrigo Quispe Gil</h2>
+          <p class="fundador__role">IBM Z Student Ambassador</p>
+          <p class="fundador__bio">
+            Estudiante universitario apasionado por la tecnología IBM Z y el impacto que puede generar en el ecosistema estudiantil latinoamericano. Como IBM Z Student Ambassador, creé esta comunidad con el propósito de acercar a otros estudiantes al mundo del mainframe y abrirles las puertas a oportunidades que quizás no sabían que existían.
+          </p>
+          <p class="fundador__bio">
+            Creo firmemente en que aprender tecnología juntos multiplica el impacto. IBM Z Community UA es ese espacio: un lugar donde la curiosidad se convierte en habilidades reales.
+          </p>
+          <a href="https://www.linkedin.com/in/qgrodrigo/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Ver perfil en LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-title" id="faq-title">¿Tenés alguna duda?</h2>
+          <p class="section-subtitle">Respondemos las preguntas más comunes sobre la comunidad y IBM Z.</p>
+        </div>
+
+        <div class="faq__list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-1">
+              <span>¿Qué es IBM Z?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-1" hidden>
+              <p>IBM Z (también conocido como mainframe IBM Z) es la plataforma de computación empresarial más avanzada y confiable del mundo. Procesa miles de millones de transacciones diarias para bancos, aerolíneas, gobiernos y grandes corporaciones globalmente. A pesar de su bajo perfil público, el 71% de las transacciones por tarjeta de crédito globales y el 92% de las transacciones bancarias mundiales corren sobre IBM Z.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-2">
+              <span>¿Necesito experiencia previa para unirme?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-2" hidden>
+              <p>¡Para nada! IBM Z Community UA da la bienvenida a estudiantes de todos los niveles. No necesitás ningún conocimiento previo sobre IBM Z ni experiencia en programación. La plataforma IBM Z Xplore y nuestras actividades están diseñadas para comenzar desde cero y avanzar gradualmente.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-3">
+              <span>¿IBM Z Xplore es realmente gratuito?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-3" hidden>
+              <p>Sí, completamente gratuito. IBM Z Xplore es una plataforma oficial de IBM diseñada específicamente para estudiantes y personas que quieren aprender sobre IBM Z sin costo alguno. Incluye laboratorios prácticos, módulos de aprendizaje autodirigido e insignias digitales verificables que podés agregar a tu perfil de LinkedIn.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-4">
+              <span>¿Pueden participar estudiantes de cualquier universidad?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-4" hidden>
+              <p>¡Sí! La comunidad es abierta a estudiantes de cualquier universidad, ya sea pública o privada. Tampoco importa la carrera que estés cursando: sistemas, ingeniería, ciencias económicas, administración — todos son bienvenidos. Lo único que se necesita es curiosidad y ganas de aprender.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-5">
+              <span>¿Cómo puedo unirme a la comunidad?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__answer" id="faq-5" hidden>
+              <p>Es muy simple: hacé clic en el botón <strong>"Unirme por WhatsApp"</strong> que encontrás en esta página y se te redirigirá al grupo de la comunidad. Una vez dentro, estarás al tanto de todas las actividades, recursos y novedades. ¡Te esperamos!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CTA FINAL ═══════════════════════════ -->
+    <section class="section cta-final" id="cta" aria-labelledby="cta-title">
+      <div class="cta-final__bg" aria-hidden="true"></div>
+      <div class="container cta-final__inner">
+        <div class="cta-final__glow" aria-hidden="true"></div>
+        <p class="section-eyebrow cta-eyebrow">¿Listo para empezar?</p>
+        <h2 class="cta-final__title" id="cta-title">Forma parte de<br/>IBM Z Community UA</h2>
+        <p class="cta-final__desc">Conectá con otros estudiantes, aprendé nuevas tecnologías y descubrí oportunidades para impulsar tu carrera.</p>
+        <a href="https://chat.whatsapp.com/BWvJWWB3qevKkttHyBTSd6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large btn--cta">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Unirme por WhatsApp
+        </a>
+        <p class="cta-final__note">Totalmente gratuito · Sin compromisos · Para todos los niveles</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="navbar__logo footer-logo" aria-label="IBM Z Community UA">
+          <svg class="logo-icon" viewBox="0 0 56 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="54" height="118" rx="2" stroke="currentColor" stroke-width="2"/>
+            <line x1="1" y1="30" x2="55" y2="30" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="1" y1="60" x2="55" y2="60" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="1" y1="90" x2="55" y2="90" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="1" x2="28" y2="119" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="1" y1="1" x2="28" y2="30" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="1" x2="55" y2="30" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="30" x2="1" y2="60" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="30" x2="55" y2="60" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="1" y1="60" x2="28" y2="90" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="55" y1="60" x2="28" y2="90" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="90" x2="1" y2="119" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="28" y1="90" x2="55" y2="119" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span class="logo-text">IBM Z<span class="logo-sub"> Community UA</span></span>
+        </a>
+        <p class="footer__tagline">Comunidad universitaria para estudiantes apasionados por IBM Z y la tecnología empresarial.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <h3 class="footer__nav-title">Navegación</h3>
+        <ul role="list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#comunidad">Comunidad</a></li>
+          <li><a href="#xplore">IBM Z Xplore</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h3 class="footer__nav-title">Conectate</h3>
+        <ul role="list">
+          <li>
+            <a href="https://chat.whatsapp.com/BWvJWWB3qevKkttHyBTSd6" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              WhatsApp Community
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/qgrodrigo/" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://ibmzxplore.influitive.com" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              IBM Z Xplore
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 IBM Z Community UA — Impulsado por el IBM Z Student Ambassador Program</p>
+        <p class="footer__disclaimer">IBM Z y IBM Z Xplore son marcas registradas de IBM Corporation. Esta comunidad es iniciativa independiente de un IBM Z Student Ambassador.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
